@@ -3,36 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberpunk Welcome</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: url('whale-logo-2.png') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-            overflow: hidden;
-        }
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/all.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{{ url_for('home')}}"><img class="object-fit-cover" src="./static/whale-logo-2.png" width="120" height="120"></a>  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </nav>
+<header class="header" style="background-image: url(./static/index_photo.png)">
+    <div class="container d-flex align-items-center h-100">     <!--定位位置-->
+        <div>
+            <h1>手沖 & 咖啡<br>Pour Over & Cafe</h1>
+            <button class="btn btn-primary btn-lg" type="button">購買</button>
+        </div>
+    </div>    
+</header>
 
-        h1 {
-            font-size: 4em;
-            text-align: center;
-            margin-top: 20%;
-            color: #00FF99;
-            text-shadow: 0 0 10px rgba(0, 255, 153, 0.7), 0 0 20px rgba(0, 255, 153, 0.7), 0 0 30px rgba(0, 255, 153, 0.7);
-        }
+    <section class="container mt-6 col-md-16">
+        <div class="row justify-content-center border border-dark">
+            <div class="col-md-5">
+                <img class="height-s5 w-100 object-fit-cover" src="./static/world map.png" alt="">
+            </div>
+            <div class="col-md-3 d-flex align-items-center border border-dark">
+                <div>
+                    <h2>中美洲及加勒比海地區</h2>
+                    <p style="margin:5px">哥斯大黎加 (Costa Rica)</p>
+                    <p style="margin:5px">瓜地馬拉 (Guatemala)</p>
+                    <p style="margin:5px">尼加拉瓜 (Nicaragua)</p>
+                    <p style="margin:5px">薩爾瓦多(El Salvador)</p>
+                    <p style="margin:5px">古巴 (Cuba)</p>
+                    <p style="margin:5px">巴拿馬</p>
+                    <h2>南美洲地區</h2>
+                    <p style="margin:5px">哥倫比亞 (Colombia)</p>
+                    <p style="margin:5px">巴西 (Brazil)</p>
+                </div>            
+            </div>
+        </div>
 
-        .neon {
-            text-align: center;
-            font-size: 2em;
-            color: #ff0099;
-            text-shadow: 0 0 10px rgba(255, 0, 153, 0.7), 0 0 20px rgba(255, 0, 153, 0.7), 0 0 30px rgba(255, 0, 153, 0.7);
-        }
+        <div class="row justify-content-center mt-4 flex-row-reverse">
+            <div class="col-md-5">
+                <img class="height-s5 w-100 object-fit-cover" src="./static/image 10.png" alt="">
+            </div>
+            <div class="col-md-5 d-flex align-items-center">
+                <div>
+                    <h2>非洲地區</h2>
+                    <p style="margin:5px">衣索比亞(Ethiopia)</p>
+                    <p style="margin:5px">肯亞(Kenya)</p>
+                    <p style="margin:5px">坦尚尼亞(Tanzania)</p>
+                    <p style="margin:5px">馬拉威</p>
+                    <h2>亞洲地區</h2>
+                    <p style="margin:5px">印尼(Indonesia)</p>
+                    <h2>大洋洲地區</h2>
+                    <p style="margin:5px">夏威夷(Hawaii)</p>
+                </div>            
+            </div>
+        </div>
+    </section>
 
-        .floating {
-            position: absolute;
-            bottom: 20%;
-            left: 50%;
- 
+    <section class="py-5 mt-6" style="background-image:  url(./static/bg.png);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center">
+                    <img src="./static/dd.png" style="width: 300px;" class="height-s5 w-100 object-fit-cover" alt="">
+                </div>
+                <div class="col-sm-6 d-flex align-items-center p-3 border">
+                    <div>
+                        <h2>黃金烘焙 Blonde Roast</h2>
+                        <p style="margin:5px">黃金烘焙其實就是『淺烘焙』，金色烘焙咖啡的味道較淡，帶有明亮和新鮮的味道。咖啡愛好者經常將 Blonde 烘焙描述為果香或花香。</p>
+                        <h2>中度烘焙 Medium Roast</h2>
+                        <p>中度烘焙的咖啡豆比淺度烘焙的咖啡豆烘焙時間長，但不如深度烘焙的咖啡豆烘焙時間長。這使得一杯苦咖啡比淺度烘焙咖啡具有濃鬱的味道和深度，但不如深度烘焙咖啡那麼濃鬱。中度烘焙的咖啡通常被描述為具有“順滑”的味道。</p>
+                        <h2>深度烘焙 Dark Roast</h2>
+                        <p>深度烘焙咖啡來自於較長的烘焙時間，帶有濃郁口感，滋味深厚大膽，有著十分有個性的風味。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-6">    <!--mt-6設定間距-->
+        <div class="row">
+            <div class="col-md-3">      <!--md-1設定寬度-->
+                <div class="card">
+                    <img src="./static/mozart.png" class="card-img-top height-s3 object-fit-cover" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">莫 札 特</h5>
+                      <p class="card-text">風味描述: 它的甘甜度和莓果香氣絕對會讓您驚豔不已！ 甜度、稠度、厚度相當良好，有著類似香蕉乾的熟果甜味。</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">國家：哥斯大黎加</li>
+                      <li class="list-group-item">海拔: 1,950M</li>
+                      <li class="list-group-item">處理法: 葡萄乾蜜處理</li>
+                      <li class="list-group-item">重量：450元 / 半磅</li>
+                    </ul>
+                    <button type="button" class="btn-primary btn w-100">購入</button>
+                </div>
+            </div>
+            <div class="col-md-3">      <!--md-1設定寬度-->
+                <div class="card">
+                    <img src="./static/bach.png" class="card-img-top height-s3 object-fit-cover" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">巴    哈</h5>
+                      <p class="card-text">風味描述: 甜蜜繽紛的各式水果，草莓、蘋果、檸檬、葡萄、柑橘的滋味多樣展 現，蜜糖和太妃糖的滋味令人難忘。絲滑奶油般的細緻醇感，如頂級 印度大吉嶺紅茶的悠長餘韻。</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">國家：哥斯大黎加</li>
+                      <li class="list-group-item">海拔: 1,950M</li>
+                      <li class="list-group-item">處理法: 葡萄乾蜜處理</li>
+                      <li class="list-group-item">重量：450元 / 半磅</li>
+                    </ul>
+                    <button type="button" class="btn-primary btn w-100">購入</button>
+                </div>
+            </div>
+            <div class="col-md-3">      <!--md-1設定寬度-->
+                <div class="card">
+                    <img src="./static/chopin.png" class="card-img-top height-s3 object-fit-cover" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">蕭   邦</h5>
+                      <p class="card-text">風味描述: 玫瑰花、酒釀葡萄、櫻桃、蜜糖、桂花、黑莓、哈密瓜、厚實滑順、水果茶、可可。</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">國家：哥斯大黎加</li>
+                      <li class="list-group-item">海拔: 1650-1900m</li>
+                      <li class="list-group-item">處理法: 酵素水洗</li>
+                      <li class="list-group-item">重量：450元 / 半磅</li>
+                    </ul>
+                    <button type="button" class="btn-primary btn w-100">購入</button>
+                </div>
+            </div>
+            <div class="col-md-3">      <!--md-1設定寬度-->
+                <div class="card">
+                    <img src="./static/beethoven.png" class="card-img-top height-s3 object-fit-cover" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">貝 多 芬</h5>
+                      <p class="card-text">風味描述: 綠葡萄、香草、草莓、甜瓜、柑橘香氣，紅石榴果汁酸香，乾淨度佳 ，口感滑順，帶一點綠色奇異果的酸。</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">國家：哥斯大黎加</li>
+                      <li class="list-group-item">海拔: 1,900M</li>
+                      <li class="list-group-item">處理法: 水洗處理</li>
+                      <li class="list-group-item">重量：450元 / 半磅</li>
+                    </ul>
+                    <button type="button" class="btn-primary btn w-100">購入</button>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark mt-6 py-5">
+        <div class="container">
+            <a href="https://www.youtube.com/watch?v=qRZLtIcPdls&list=PL4azyGnJkkUhvbRGZb1GnCdxstmu4TGLP&index=5">練習來源</a>
+        </div>
+    </footer>
+</body>
+</html>
