@@ -1,0 +1,219 @@
+/* Basic CSS */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Playfair Display'
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+:root{
+    --main-color:#9c8461;
+    --main-light:#c2a899;
+    --main-dark:#6c443b;
+    --product-bg-color:#f8f8f8;
+}
+/* Main */
+#main{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/* header */
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    padding: 30px 0px;
+}
+.menu-icon svg{
+    fill: var(--main-color);
+    width: 25px;
+    height: 25px;
+}
+.logo{
+    max-width: 180px;
+    height: 150px;
+    display: flex;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+    max-height: 120px;
+}
+.nav-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 25px;
+}
+.nav-btns a svt{
+    fill: #3f3f3f;
+    width: 20px;
+    height: 18px;
+}
+.nav-cart{
+    position: relative;
+}
+.nav-cart span{
+    position: absolute;
+    right: -8px;
+    top:-12px;
+    color: #FFFFFF;
+    background-color: var(--main-color);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+.side-menu{
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.6);
+    z-index: 100;
+    transition: all ease 0.6s;
+}
+.side-menu::before{
+    content: '';
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    z-index: -1;
+    display: none;
+}
+#menu-btn:checked ~ .side-menu{
+    left: 0%;
+}
+/*加上去後有問題*/
+#menu-btn:checked ~ .side-menu::before{
+    display: block;
+}
+/*把勾隱藏*/
+#menu-btn{
+    display: none;
+}
+.menu-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #FFFFFF;
+}
+.side-menu strong{
+    display: block;
+    font-weight: 600;
+    margin: 10px;
+    padding: 5px 20px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+}
+.close-btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 800;
+}
+.menu{
+    display: block;
+    width: 100%;
+}
+.menu li a{
+    padding: 20px;
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    color: #383838;
+    font-weight: 500;
+    border-bottom: 1px solid #f3f3f3;
+    transition: all ease 0.3s;
+}
+/* main-content */
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    align-items: center;
+}
+.main-content-img{
+    width: 100%;
+    height: 75vh;
+}
+.main-content-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.main-content-text{
+    display: flex;
+    flex-direction: column;
+}
+.main-content-text strong{
+    color: var(--main-dark);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 600;
+}
+.main-content-text h1{
+    font-size: 4rem;
+    color: #313131;
+    line-height: 4.7rem;
+    font-weight: 600;
+}
+.main-content-text p{
+    color: #8a8a8a;
+    margin: 30px 0px;
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+    max-width: 300px;
+}
+.main-content-text a{
+    color: #FFFFFF;
+    background-color: var(--main-color);
+    max-width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
