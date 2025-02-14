@@ -959,3 +959,175 @@ footer{
     color: #252525;
     font-size: 0.9rem;
 }
+/* Making Responsive */
+@media(max-width:1200px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+    #download-app{
+        width: 90%;
+    }
+}
+@media(max-width:1100px){
+    .popular-container{
+        grid-template-columns: 1fr;
+    }
+    .popular-banner-img{
+        max-height: 500px;
+    }
+}
+@media(max-width:1024px){
+    .recent-product-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+    #download-app{
+        flex-direction: column;
+        height: 100%;
+        background-color: transparent;
+        margin: 30px auto;
+        max-width: 100%;
+    }
+    .app-img{
+        height: 450px;
+        width: 220px;
+    }
+    .download-app-text{
+        max-width: 100%;
+        background-color: var(--product-bg-color);
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .main-content-img{
+        max-height: 60vh;
+    }
+    .main-content-text{
+        margin-top: 30px;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-content-text p{
+        max-width: 400px;
+        margin: auto;
+    }
+    .main-content-text h1{
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+    .main-content-text a{
+        padding: 0px 20px;
+    }
+}
+@media(max-width:850px){
+    .blog-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .blog-box{
+        display: flex;
+        flex-direction: column;
+    }
+    #partner{
+        margin-top: 20px;
+        justify-content: center;
+        grid-gap: 30px;
+    }
+    #partner img{
+        height: 40px;
+    }
+    #shopping-banner{
+        padding: 20px;
+    }
+    .shopping-banner-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .shopping-banner-img{
+        height: auto;
+        width: 90%;
+    }
+    .shopping-banner-img img{
+        width: 100%;
+    }
+    .shopping-banner-text{
+        width: 90%;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+    .navigation{
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        height: 30px;
+    }
+    .logo img{
+        max-height: 30px;
+    }
+    header.header-fix .navigation{
+        padding: 10px 20px;
+    }
+}
+@media(max-width:724px){
+    .recent-product-container,
+    .popular-product-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .blog-container{
+        grid-template-columns: 1fr;
+    }
+    .login-form,
+    .sign-up-form{
+        width: 90%;
+    }
+    .search-input{
+        height: 60px;
+    }
+    .search-input input,
+    .search-cancel{
+        font-size: 1.4rem;
+    }
+}
+@media(max-whidth:550px){
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+    .service-box{
+        width: 100%;
+    }
+}
+@media(max-whidth:320px){
+    .recent-product-container,
+    .popular-product-container{
+        grid-template-columns: 1fr;
+    }
+    .download-btns{
+        flex-direction: column;
+    }
+    .download-btns a{
+        margin: 4px 0px;
+        width: 140px;
+    }
+    .download-btns a img{
+        width: 100%;
+    }
+    .download-app-text strong{
+        font-size: 1.3rem;
+    }
+}
